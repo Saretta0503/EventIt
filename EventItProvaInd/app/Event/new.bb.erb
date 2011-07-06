@@ -1,0 +1,99 @@
+<div id="pageTitle">
+    <h1>New Event</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @event.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Id: </td>
+    			  <td class="itemValue"><input type="text" name="event[id]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Category: </td>
+    			  <td class="itemValue"><input type="text" name="event[category]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Title: </td>
+    			  <td class="itemValue"><input type="text" name="event[title]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Description: </td>
+    			  <td class="itemValue"><input type="text" name="event[description]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Timestart: </td>
+    			  <td class="itemValue"><input type="text" name="event[timeStart]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Datestart: </td>
+    			  <td class="itemValue"><input type="text" name="event[dateStart]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Timeend: </td>
+    			  <td class="itemValue"><input type="text" name="event[timeEnd]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Dateend: </td>
+    			  <td class="itemValue"><input type="text" name="event[dateEnd]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Advisedtime: </td>
+    			  <td class="itemValue"><input type="text" name="event[advisedTime]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Street: </td>
+    			  <td class="itemValue"><input type="text" name="event[street]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Number: </td>
+    			  <td class="itemValue"><input type="text" name="event[number]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Cap: </td>
+    			  <td class="itemValue"><input type="text" name="event[cap]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">City: </td>
+    			  <td class="itemValue"><input type="text" name="event[city]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Province: </td>
+    			  <td class="itemValue"><input type="text" name="event[province]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Region: </td>
+    			  <td class="itemValue"><input type="text" name="event[region]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Country: </td>
+    			  <td class="itemValue"><input type="text" name="event[country]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

@@ -1,0 +1,99 @@
+<div id="pageTitle">
+		<h1>Edit <%= @event.id%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @event.object %>
+    <%= link_to "Delete", :action => :delete, :id => @event.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @event.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Id: </td>
+              			<td class="itemValue"><input type="text" name="event[id]" value="<%= @event.id %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Category: </td>
+              			<td class="itemValue"><input type="text" name="event[category]" value="<%= @event.category %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Title: </td>
+              			<td class="itemValue"><input type="text" name="event[title]" value="<%= @event.title %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Description: </td>
+              			<td class="itemValue"><input type="text" name="event[description]" value="<%= @event.description %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Timestart: </td>
+              			<td class="itemValue"><input type="text" name="event[timeStart]" value="<%= @event.timeStart %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Datestart: </td>
+              			<td class="itemValue"><input type="text" name="event[dateStart]" value="<%= @event.dateStart %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Timeend: </td>
+              			<td class="itemValue"><input type="text" name="event[timeEnd]" value="<%= @event.timeEnd %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Dateend: </td>
+              			<td class="itemValue"><input type="text" name="event[dateEnd]" value="<%= @event.dateEnd %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Advisedtime: </td>
+              			<td class="itemValue"><input type="text" name="event[advisedTime]" value="<%= @event.advisedTime %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Street: </td>
+              			<td class="itemValue"><input type="text" name="event[street]" value="<%= @event.street %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Number: </td>
+              			<td class="itemValue"><input type="text" name="event[number]" value="<%= @event.number %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Cap: </td>
+              			<td class="itemValue"><input type="text" name="event[cap]" value="<%= @event.cap %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">City: </td>
+              			<td class="itemValue"><input type="text" name="event[city]" value="<%= @event.city %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Province: </td>
+              			<td class="itemValue"><input type="text" name="event[province]" value="<%= @event.province %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Region: </td>
+              			<td class="itemValue"><input type="text" name="event[region]" value="<%= @event.region %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Country: </td>
+              			<td class="itemValue"><input type="text" name="event[country]" value="<%= @event.country %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

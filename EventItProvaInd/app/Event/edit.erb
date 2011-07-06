@@ -1,0 +1,102 @@
+<div class="pageTitle">
+  <h1>Edit <%= @event.id %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @event.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @event.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @event.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="event[id]" class="fieldLabel">Id</label>
+            <input type="text" name="event[id]" value="<%= @event.id %>" <%= placeholder( "Id" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[category]" class="fieldLabel">Category</label>
+            <input type="text" name="event[category]" value="<%= @event.category %>" <%= placeholder( "Category" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[title]" class="fieldLabel">Title</label>
+            <input type="text" name="event[title]" value="<%= @event.title %>" <%= placeholder( "Title" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[description]" class="fieldLabel">Description</label>
+            <input type="text" name="event[description]" value="<%= @event.description %>" <%= placeholder( "Description" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[timeStart]" class="fieldLabel">Timestart</label>
+            <input type="text" name="event[timeStart]" value="<%= @event.timeStart %>" <%= placeholder( "Timestart" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[dateStart]" class="fieldLabel">Datestart</label>
+            <input type="text" name="event[dateStart]" value="<%= @event.dateStart %>" <%= placeholder( "Datestart" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[timeEnd]" class="fieldLabel">Timeend</label>
+            <input type="text" name="event[timeEnd]" value="<%= @event.timeEnd %>" <%= placeholder( "Timeend" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[dateEnd]" class="fieldLabel">Dateend</label>
+            <input type="text" name="event[dateEnd]" value="<%= @event.dateEnd %>" <%= placeholder( "Dateend" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[advisedTime]" class="fieldLabel">Advisedtime</label>
+            <input type="text" name="event[advisedTime]" value="<%= @event.advisedTime %>" <%= placeholder( "Advisedtime" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[street]" class="fieldLabel">Street</label>
+            <input type="text" name="event[street]" value="<%= @event.street %>" <%= placeholder( "Street" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[number]" class="fieldLabel">Number</label>
+            <input type="text" name="event[number]" value="<%= @event.number %>" <%= placeholder( "Number" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[cap]" class="fieldLabel">Cap</label>
+            <input type="text" name="event[cap]" value="<%= @event.cap %>" <%= placeholder( "Cap" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[city]" class="fieldLabel">City</label>
+            <input type="text" name="event[city]" value="<%= @event.city %>" <%= placeholder( "City" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[province]" class="fieldLabel">Province</label>
+            <input type="text" name="event[province]" value="<%= @event.province %>" <%= placeholder( "Province" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[region]" class="fieldLabel">Region</label>
+            <input type="text" name="event[region]" value="<%= @event.region %>" <%= placeholder( "Region" ) %> />
+          </li>
+      
+          <li>
+            <label for="event[country]" class="fieldLabel">Country</label>
+            <input type="text" name="event[country]" value="<%= @event.country %>" <%= placeholder( "Country" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

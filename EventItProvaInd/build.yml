@@ -1,0 +1,24 @@
+sdk: /Users/Sara/.gem/ruby/1.8/gems/rhodes-3.0.1
+sdkversion: 3.0.1
+name: EventItProvaInd
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+wmsdk: Windows Mobile 6 Professional SDK (ARMV4I)
+applog: rholog.txt
+iphone:
+  configuration: Debug
+  sdk: iphonesimulator4.3
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: com.rhomobile.eventitprovaind
+  BundleURLScheme: eventitprovaind
+wp:
+  productid: b921e010-891e-012e-6bb9-442c033a538c
+extensions: 
+  - json
+  - another-extension
+capabilities: 
+  - gps

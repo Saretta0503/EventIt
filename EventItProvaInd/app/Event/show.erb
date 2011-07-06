@@ -1,0 +1,98 @@
+<div class="pageTitle">
+  <h1><%= @event.id %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @event.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+    
+        <li>
+          <div class="itemLabel">Id</div>
+          <div class="itemValue"><%= @event.id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Category</div>
+          <div class="itemValue"><%= @event.category %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Title</div>
+          <div class="itemValue"><%= @event.title %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Description</div>
+          <div class="itemValue"><%= @event.description %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">TimeStart</div>
+          <div class="itemValue"><%= @event.timeStart %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">DateStart</div>
+          <div class="itemValue"><%= @event.dateStart %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">TimeEnd</div>
+          <div class="itemValue"><%= @event.timeEnd %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">DateEnd</div>
+          <div class="itemValue"><%= @event.dateEnd %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">AdvisedTime</div>
+          <div class="itemValue"><%= @event.advisedTime %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Street</div>
+          <div class="itemValue"><%= @event.street %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Number</div>
+          <div class="itemValue"><%= @event.number %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Cap</div>
+          <div class="itemValue"><%= @event.cap %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">City</div>
+          <div class="itemValue"><%= @event.city %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Province</div>
+          <div class="itemValue"><%= @event.province %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Region</div>
+          <div class="itemValue"><%= @event.region %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Country</div>
+          <div class="itemValue"><%= @event.country %></div>
+        </li>
+    
+  </ul>
+</div>

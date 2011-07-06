@@ -1,0 +1,29 @@
+<div class="pageTitle">
+  <h1>Events</h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem regularButton">
+    <a href="<%= Rho::RhoConfig.start_path %>">Home</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :new %>">New</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+    <% @events.each do |event| %>
+    
+        <li>
+          <a href="<%= url_for :action => :show, :id => event.object %>">
+            <span class="title"><%= event.id %></span><span class="disclosure_indicator"></span>
+          </a>
+        </li>
+    
+    <% end %>
+   <a href="<%= url_for :action => :geolocationHttpRequest %>">
+       <span class="title">Geolocalizzazione</span><span class="disclosure_indicator"></span>
+   </a>
+  </ul>
+</div>

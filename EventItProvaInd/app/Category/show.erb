@@ -1,0 +1,38 @@
+<div class="pageTitle">
+  <h1><%= @category.id %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @category.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+    
+        <li>
+          <div class="itemLabel">Id</div>
+          <div class="itemValue"><%= @category.id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Name</div>
+          <div class="itemValue"><%= @category.name %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Description</div>
+          <div class="itemValue"><%= @category.description %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">ParentId</div>
+          <div class="itemValue"><%= @category.parentId %></div>
+        </li>
+    
+  </ul>
+</div>

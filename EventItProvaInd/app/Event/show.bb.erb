@@ -1,0 +1,96 @@
+<div id="pageTitle">
+	<h1><%= @event.id%></h1>
+</div>
+
+<div id="toolbar">
+        <%= link_to "Back", :action => :index %>
+        <%= link_to "Edit", :action => :edit, :id => @event.object %>
+</div>
+
+
+<div id="content">
+
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @event.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Category</td>
+        <td class="itemValue"><%= @event.category%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Title</td>
+        <td class="itemValue"><%= @event.title%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Description</td>
+        <td class="itemValue"><%= @event.description%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">TimeStart</td>
+        <td class="itemValue"><%= @event.timeStart%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">DateStart</td>
+        <td class="itemValue"><%= @event.dateStart%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">TimeEnd</td>
+        <td class="itemValue"><%= @event.timeEnd%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">DateEnd</td>
+        <td class="itemValue"><%= @event.dateEnd%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">AdvisedTime</td>
+        <td class="itemValue"><%= @event.advisedTime%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Street</td>
+        <td class="itemValue"><%= @event.street%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Number</td>
+        <td class="itemValue"><%= @event.number%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Cap</td>
+        <td class="itemValue"><%= @event.cap%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">City</td>
+        <td class="itemValue"><%= @event.city%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Province</td>
+        <td class="itemValue"><%= @event.province%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Region</td>
+        <td class="itemValue"><%= @event.region%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Country</td>
+        <td class="itemValue"><%= @event.country%></td>
+      </tr>
+      
+    </table>
+</div>

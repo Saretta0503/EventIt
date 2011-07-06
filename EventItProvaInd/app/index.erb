@@ -1,0 +1,36 @@
+<div class="pageTitle">
+  <h1>EventItProvaInd</h1>
+</div>
+
+<div class="toolbar">
+  <% if SyncEngine::logged_in > 0 %>
+      <div class="leftItem blueButton">
+        <a href="<%= url_for :controller => :Settings, :action => :do_sync %>">Sync</a>
+      </div>
+      <div class="rightItem regularButton">
+        <a href="<%= url_for :controller => :Settings, :action => :logout %>">Logout</a>
+      </div>
+  <% else %>
+      <div class="rightItem regularButton">
+        <a href="<%= url_for :controller => :Settings, :action => :login %>">Login</a>
+      </div>
+  <% end %>
+</div>
+
+<div class="content">
+  <ul>
+    <li>
+      <a href="Event">
+        <span class="title">Evento</span>
+        <span class="disclosure_indicator"></span>
+      </a>
+    </li>
+       
+    <li>
+      <a href="Category">
+        <span class="title">Categoria</span>
+        <span class="disclosure_indicator"></span>
+      </a>
+    </li>
+  </ul>
+</div>
